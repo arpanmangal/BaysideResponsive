@@ -1,4 +1,4 @@
-S@charset "utf-8";
+@charset "utf-8";
 /* Simplify width and height calculations */
 html {
 	box-sizing: border-box;
@@ -62,6 +62,9 @@ a:hover , a:active, a:focus{
 	margin: 0;
 	text-align: center;
 	background-color: #1E1E1E;
+	font-family: source-sans-pro;
+	font-style: normal;
+	font-weight: 200;
 }
 #menulink a {
 	color: white;
@@ -85,8 +88,9 @@ a:hover , a:active, a:focus{
 	-webkit-transition: all ease-out 0.5s;
 	transition: all ease-out 0.5s;
 }
-#navlinks a:hover, #navlinks a:active, #navlinks a:focus, #navlinks a.thispage {
-	color: #F58979;
+#navlinks.displayed {
+	top: 135px;
+	z-index: 1;
 }
 
 #navlinks.start {
@@ -96,25 +100,19 @@ a:hover , a:active, a:focus{
 	top: -12em;
 	opacity: 0;
 }
-#navlinks.displayed {
-	top: 135px;
-	z-index: 1;
-}
 
 #navlinks a {
-	color: white;
-	font-weight: 400;
-	text-decoration: none;
-	text-transform: uppercase;
-	display: block;
 	padding-top: 10px;
 	padding-bottom: 10px;
+	color: white;
+	font-weight: 400;
+	display: block;
+	text-decoration: none;
+	text-transform: uppercase;
 }
-
-
-
-
-
+#navlinks a:hover, #navlinks a:active, #navlinks a:focus, #navlinks a.thispage {
+	color: #F58979;
+}
 
 
 main, aside {
@@ -136,6 +134,8 @@ main, aside {
 	padding-right: 4%;
 	padding-bottom: 20px;
 	margin-top: 10px;
+	font-family: source-sans-pro;
+	font-style: normal;
 }
 
 main figure {
